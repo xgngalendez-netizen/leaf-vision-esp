@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Smart Plant Vision Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* Base colors inspired by modern plant and tech aesthetics */
+    --background: 210 40% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -17,56 +16,73 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Vibrant plant-inspired primary colors */
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 76% 56%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Fresh secondary palette */
+    --secondary: 120 60% 94%;
+    --secondary-foreground: 142 76% 36%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    /* Energetic accent colors */
+    --accent: 47 96% 60%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
+    /* Smart destructive colors */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
+    /* Technology-inspired blues */
+    --tech-blue: 217 91% 60%;
+    --tech-blue-dark: 217 91% 40%;
+
+    /* Warning and success states */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 142 76% 36%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Gradients for modern look */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 56%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 91% 60%), hsl(142 76% 56%));
+    --gradient-accent: linear-gradient(135deg, hsl(47 96% 60%), hsl(38 92% 50%));
+    --gradient-tech: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 40%));
+    --gradient-bg: linear-gradient(180deg, hsl(210 40% 98%), hsl(120 60% 97%));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Shadows with brand colors */
+    --shadow-primary: 0 10px 30px -10px hsl(142 76% 36% / 0.3);
+    --shadow-tech: 0 10px 30px -10px hsl(217 91% 60% / 0.3);
+    --shadow-accent: 0 10px 30px -10px hsl(47 96% 60% / 0.3);
+    --shadow-elegant: 0 4px 20px -4px hsl(222.2 84% 4.9% / 0.1);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 217.2 32.6% 17.5%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 217.2 32.6% 17.5%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 76% 56%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-glow: 142 76% 76%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -74,23 +90,20 @@ All colors MUST be HSL.
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 47 96% 70%;
+    --accent-foreground: 222.2 84% 4.9%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
+    --tech-blue: 217 91% 70%;
+    --tech-blue-dark: 217 91% 50%;
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --ring: 142 76% 56%;
+
+    --gradient-bg: linear-gradient(180deg, hsl(222.2 84% 4.9%), hsl(217.2 32.6% 17.5%));
   }
 }
 
@@ -100,6 +113,136 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: var(--gradient-bg);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-glow;
+  }
+}
+
+@layer components {
+  /* Hero button variant */
+  .btn-hero {
+    @apply bg-primary text-primary-foreground hover:bg-primary-glow;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-primary), 0 20px 40px -10px hsl(142 76% 36% / 0.4);
+  }
+
+  /* Tech button variant */
+  .btn-tech {
+    @apply text-white;
+    background: var(--gradient-tech);
+    box-shadow: var(--shadow-tech);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-tech:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-tech), 0 20px 40px -10px hsl(217 91% 60% / 0.4);
+  }
+
+  /* Warning/Accent button */
+  .btn-accent {
+    @apply text-black font-semibold;
+    background: var(--gradient-accent);
+    box-shadow: var(--shadow-accent);
+    transition: var(--transition-smooth);
+  }
+
+  .btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-accent), 0 20px 40px -10px hsl(47 96% 60% / 0.4);
+  }
+
+  /* Glass morphism card */
+  .card-glass {
+    @apply backdrop-blur-sm bg-white/90 dark:bg-card/90;
+    box-shadow: var(--shadow-elegant);
+    border: 1px solid hsl(0 0% 100% / 0.2);
+  }
+
+  /* Stream container */
+  .stream-container {
+    @apply relative rounded-xl overflow-hidden;
+    background: var(--gradient-tech);
+    box-shadow: var(--shadow-tech);
+  }
+
+  /* Sensor card */
+  .sensor-card {
+    @apply p-6 rounded-xl;
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+    color: white;
+    transition: var(--transition-smooth);
+  }
+
+  .sensor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-primary), 0 20px 40px -10px hsl(142 76% 36% / 0.4);
+  }
+
+  /* Results grid animations */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slide-in {
+    animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  /* Pulse animation for live indicators */
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Loading spinner */
+  @keyframes spin-smooth {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-smooth {
+    animation: spin-smooth 1s linear infinite;
   }
 }
